@@ -4,7 +4,7 @@ import importlib
 import argparse
 import gzip
 
-
+## Create a file with a random array
 def create_example(filename, compress=False):
     empty_list = []
     empty_list.append([])
@@ -38,6 +38,7 @@ def create_example(filename, compress=False):
             f.close()
 
 
+## Create a file with a custom array
 def user_input(array, filename, compress=False):
     if compress == False:
         with open(filename, "w") as f:
@@ -51,7 +52,7 @@ def user_input(array, filename, compress=False):
             f.close()
 
 
-
+## Read a file
 def read_file(filename, compress=False):
     if compress == False:
         try:
