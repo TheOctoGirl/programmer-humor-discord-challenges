@@ -59,7 +59,7 @@ def read_file(filename, compress=False):
             filename = filename.replace(".py", "")
             data = importlib.import_module(filename)
             print(data.data)
-        except:
+        except ModuleNotFoundError:
             print("File not found")
             exit(1)
     else:
